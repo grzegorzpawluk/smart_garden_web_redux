@@ -1,0 +1,50 @@
+.about {
+  color: rgb(250, 250, 250);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 90vh;
+  position: relative;
+  top: 20px;
+  text-align: center;
+}
+
+.about h1 {
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 1.25;
+  margin: 0 0 10px;
+}
+
+.about p {
+  color: #fdfafa;
+  font-family: Georgia, serif;
+  font-size: 20px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  letter-spacing: 2px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  word-spacing: 2px;
+}
+
+.about li {
+  list-style-type: none;
+}
+
+.about img {
+  width: 70%;
+  border-radius: 5%;
+}
+
+.box {
+  margin: 10px;
+  padding: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .about {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,30 @@
+.weather-button {
+  background-color: rgba(54, 138, 6, 0.85);
+  border: none;
+  border-radius: 10px;
+  color: rgb(216, 215, 215);
+  display: inline-block;
+  font-size: 16px;
+  position: relative;
+  left: 50%;
+  margin: auto;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  top: 2vh;
+  transform: translate(-50%);
+}
+
+.weather-container {
+  color: white;
+}
+
+.weather-info {
+  left: 50%;
+  list-style-type: none;
+  position: relative;
+  text-align: center;
+  top: 4vh;
+  transform: translate(-50%);
+  width: 30vw;
+}

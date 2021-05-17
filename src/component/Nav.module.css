@@ -1,0 +1,71 @@
+nav {
+  align-items: center;
+  background-color: #2d7206;
+  height: 10vh;
+  justify-content: space-around;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.logo {
+  align-items: center;
+  display: flex;
+  font-size: 20px;
+  height: 5vh;
+  justify-content: space-around;
+  letter-spacing: 5px;
+  position: absolute;
+  text-transform: uppercase;
+  transform: translate(15vw, 50%);
+  width: 5vw;
+}
+
+.navLinks {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: space-around;
+  list-style: none;
+  margin-left: auto;
+  width: 50%;
+}
+
+.navLinks a {
+  /* color can be changed in nav.js -> navStyle */
+  color: #292929;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 1250px) {
+  .navLinks {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navLinks {
+    background-color: #2d7206;
+    clip-path: circle(100px at 100% -15%);
+    -webkit-clip-path: circle(100px at 100% -15%);
+    flex-direction: column;
+    height: 100vh;
+    transition: all 1s ease-out;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+  }
+  .navLinks a {
+    font-size: 24px;
+  }
+
+  .navLinks.open {
+    clip-path: circle(1100px at 90% -10%);
+    -webkit-clip-path: circle(1100px at 90% -10%);
+    pointer-events: all;
+  }
+}

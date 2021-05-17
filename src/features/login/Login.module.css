@@ -1,0 +1,67 @@
+.homepage {
+  background-image: url('./../../pictures/background_login.jpg');
+  background-repeat: no-repeat;
+
+  /* Background image is fixed in the viewport so that it doesn't move when 
+   the content's height is greater than the image's height */
+  /* background-attachment: fixed; */
+
+  /* This is what makes the background image rescale based
+   on the container's size */
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+
+  /* Set a background color that will be displayed
+   while the background image is loading */
+  background-color: #454852;
+}
+
+.container {
+  padding: 110px;
+}
+
+.form-login {
+  position: relative;
+  left: 50%;
+  top: 10vh;
+  background-color: rgba(0, 0, 0, 0.55);
+  padding-top: 10px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 15px;
+  border-color: #d2d2d2;
+  border-width: 5px;
+  color: white;
+  box-shadow: 0 1px 0 #cfcfcf;
+  width: 50vw;
+  height: 30vh;
+  transform: translate(-50%);
+}
+
+.form-input {
+  background-color: rgba(0, 0, 0, 0.55);
+  border-radius: 10px;
+  color: white;
+  font-size: 18px;
+  left: 50%;
+  position: relative;
+  transform: translate(-50%);
+  width: 80%;
+}
+
+.form-button {
+  border: none;
+  background-color: rgba(54, 138, 6, 0.85);
+  border-radius: 10px;
+  color: rgb(216, 215, 215);
+  display: inline-block;
+  font-size: 16px;
+  left: 50%;
+  padding: 15px 32px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transform: translate(-50%);
+}

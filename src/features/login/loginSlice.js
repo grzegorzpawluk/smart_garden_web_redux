@@ -13,24 +13,27 @@ const initialState = {
   error: null,
 };
 
-export const loggingIn = createAsyncThunk('login/loggingIn', async (user) => {
-  const response = await Axios.post('login.php', {
-    user: user.login,
-    pass: user.password,
-  });
+export const loggingIn = createAsyncThunk(
+  'login/loggingIn',
+  async (user, thunkAPI) => {
+    const response = await Axios.post('login.php', {
+      user: user.login,
+      pass: user.password,
+    });
 
-  return response.data;
-});
+    if (response.data.success === 0)
+      return thunkAPI.rejectWithValue(response.data);
+
+    return response.data;
+  }
+);
 
 export const fetchUser = createAsyncThunk(
   'login/fetchUser',
   async (loginToken) => {
     Axios.defaults.headers.common['Authorization'] = 'Bearer ' + loginToken;
     const { data } = await Axios.get('user-info.php');
-    console.log(`user response: ${data.user.user}`);
-    if (data.user.user) return data;
-
-    return false;
+    return data;
   }
 );
 
@@ -41,8 +44,8 @@ const loginSlice = createSlice({
     logoutUser(state, action) {
       state.isLoggedIn = false;
       state.status = 'idle';
-      state.user = '';
-      state.role = '';
+      state.user = null;
+      state.role = null;
       localStorage.removeItem('loginToken');
     },
   },
@@ -58,7 +61,7 @@ const loginSlice = createSlice({
     [loggingIn.rejected]: (state, action) => {
       state.status = 'failed';
       state.isLoggedIn = false;
-      state.error = action.error.message;
+      state.error = action.payload.message;
     },
     [fetchUser.pending]: (state, action) => {
       state.status = 'loading';
@@ -66,7 +69,6 @@ const loginSlice = createSlice({
     [fetchUser.fulfilled]: (state, action) => {
       state.status = 'succeeded';
       state.isLoggedIn = true;
-      console.log(action.payload.user);
       state.user = action.payload.user.user;
       state.role = action.payload.user.role;
     },

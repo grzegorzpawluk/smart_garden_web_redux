@@ -17,12 +17,18 @@ const Login = () => {
   };
 
   const [loginData, setLoginData] = useState(initialState);
-  const [errorMsg, setErrorMsg] = useState('');
-  const [addRequestStatus, setAddRequestStatus] = useState('idle');
+
+  let loggingMessage;
+
+  if (loggingStatus === 'loading') {
+    loggingMessage = <div>Loading...</div>;
+  } else if (loggingStatus === 'succeeded') {
+  } else if (loggingStatus === 'failed') {
+    loggingMessage = <div>{error}</div>;
+  }
 
   const submitForm = (event) => {
     event.preventDefault();
-    setAddRequestStatus('pending');
 
     const resultAction = dispatch(loggingIn(loginData));
 
@@ -73,7 +79,7 @@ const Login = () => {
               onChange={onChangeValue}
             />
           </div>
-          {errorMsg && <div>{errorMsg}</div>}
+          {loggingMessage}
           <br></br>
           <div>
             <button className={LoginStyles['form-button']} type="submit">

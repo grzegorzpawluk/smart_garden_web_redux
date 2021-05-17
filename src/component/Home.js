@@ -15,8 +15,8 @@ function Home() {
   useEffect(() => {
     const loginToken = localStorage.getItem('loginToken');
 
-    if (loginToken) dispatch(fetchUser());
-  }, [dispatch]);
+    if (loginToken) dispatch(fetchUser(loginToken));
+  }, [dispatch, isLogged]);
 
   if (isLogged === true) {
     return (

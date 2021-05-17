@@ -1,9 +1,9 @@
 import React from 'react';
 import AboutStyle from './About.module.css';
-import systemDiagramImage from './../pictures/system_diagram.png';
-import controlRoomImage from './../pictures/control_room.png';
-import sprinklerImage from './../pictures/sprinkler.png';
-import webAppImage from './../pictures/webapp.png';
+import systemDiagramImage from './../../pictures/system_diagram.png';
+import controlRoomImage from './../../pictures/control_room.png';
+import sprinklerImage from './../../pictures/sprinkler.png';
+import webAppImage from './../../pictures/webapp.png';
 
 function About() {
   return (

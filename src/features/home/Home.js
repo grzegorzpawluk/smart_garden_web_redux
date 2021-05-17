@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Nav from './Nav';
-import About from './About';
-import Weather from './Weather';
-import Contact from './Contact';
+import Nav from '../nav/Nav';
+import About from '../about/About';
+import Weather from '../weather/Weather';
+import Contact from '../contact/Contact';
 import { useDispatch, useSelector } from 'react-redux';
-import LoginForm from '../features/login/LoginForm';
-import { fetchUser } from './../features/login/loginSlice';
+import LoginForm from '../login/LoginForm';
+import { fetchUser } from '../login/loginSlice';
 
 function Home() {
   const isLogged = useSelector((state) => state.login.isLoggedIn);

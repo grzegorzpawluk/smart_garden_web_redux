@@ -4,7 +4,7 @@ import NavStyles from './Nav.module.css';
 import { Link } from 'react-router-dom';
 import classes from 'classnames';
 
-import { logoutUser } from './../features/login/loginSlice';
+import { logoutUser } from '../login/loginSlice';
 
 import BurgerIcon from './BurgerIcon';
 

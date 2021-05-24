@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/smart_garden_web_redux/static/css/main.b4afa739.chunk.css",
-    "main.js": "/smart_garden_web_redux/static/js/main.a0537758.chunk.js",
-    "main.js.map": "/smart_garden_web_redux/static/js/main.a0537758.chunk.js.map",
+    "main.css": "/smart_garden_web_redux/static/css/main.eddc35ca.chunk.css",
+    "main.js": "/smart_garden_web_redux/static/js/main.d43160aa.chunk.js",
+    "main.js.map": "/smart_garden_web_redux/static/js/main.d43160aa.chunk.js.map",
     "runtime-main.js": "/smart_garden_web_redux/static/js/runtime-main.e6dc3905.js",
     "runtime-main.js.map": "/smart_garden_web_redux/static/js/runtime-main.e6dc3905.js.map",
     "static/js/2.58cdcfee.chunk.js": "/smart_garden_web_redux/static/js/2.58cdcfee.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/3.e9a7e9bf.chunk.js": "/smart_garden_web_redux/static/js/3.e9a7e9bf.chunk.js",
     "static/js/3.e9a7e9bf.chunk.js.map": "/smart_garden_web_redux/static/js/3.e9a7e9bf.chunk.js.map",
     "index.html": "/smart_garden_web_redux/index.html",
-    "static/css/main.b4afa739.chunk.css.map": "/smart_garden_web_redux/static/css/main.b4afa739.chunk.css.map",
+    "static/css/main.eddc35ca.chunk.css.map": "/smart_garden_web_redux/static/css/main.eddc35ca.chunk.css.map",
     "static/js/2.58cdcfee.chunk.js.LICENSE.txt": "/smart_garden_web_redux/static/js/2.58cdcfee.chunk.js.LICENSE.txt",
     "static/media/Login.module.css": "/smart_garden_web_redux/static/media/background_login.9b7f77a7.jpg",
     "static/media/system_diagram.3758ff24.png": "/smart_garden_web_redux/static/media/system_diagram.3758ff24.png",
@@ -19,7 +19,7 @@
   "entrypoints": [
     "static/js/runtime-main.e6dc3905.js",
     "static/js/2.58cdcfee.chunk.js",
-    "static/css/main.b4afa739.chunk.css",
-    "static/js/main.a0537758.chunk.js"
+    "static/css/main.eddc35ca.chunk.css",
+    "static/js/main.d43160aa.chunk.js"
   ]
 }

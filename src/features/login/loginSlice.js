@@ -21,18 +21,26 @@ export const loggingIn = createAsyncThunk(
       pass: user.password,
     });
 
-    if (response.data.success === 0)
+    if (response.data.success === 0) {
       return thunkAPI.rejectWithValue(response.data);
+    }
 
+    localStorage.setItem('loginToken', response.data.token);
     return response.data;
   }
 );
 
 export const fetchUser = createAsyncThunk(
   'login/fetchUser',
-  async (loginToken) => {
+  async (loginToken, thunkAPI) => {
     Axios.defaults.headers.common['Authorization'] = 'Bearer ' + loginToken;
     const { data } = await Axios.get('user-info.php');
+    console.log(data);
+
+    if (data.success === 0) {
+      return thunkAPI.rejectWithValue(data);
+    }
+
     return data;
   }
 );
@@ -46,7 +54,6 @@ const loginSlice = createSlice({
       state.status = 'idle';
       state.user = null;
       state.role = null;
-      localStorage.removeItem('loginToken');
     },
   },
   extraReducers: {
@@ -56,7 +63,6 @@ const loginSlice = createSlice({
     [loggingIn.fulfilled]: (state, action) => {
       state.status = 'succeeded';
       state.isLoggedIn = true;
-      localStorage.setItem('loginToken', action.payload.token);
     },
     [loggingIn.rejected]: (state, action) => {
       state.status = 'failed';

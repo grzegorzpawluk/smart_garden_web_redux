@@ -2,9 +2,15 @@
   color: rgb(250, 250, 250);
   text-align: center;
 }
+
+.email:active {
+  color: green;
+}
+
 h1 {
   text-align: center;
 }
+
 .tooltip {
   display: inline-block;
   position: relative;
@@ -41,8 +47,4 @@ h1 {
 .tooltip:hover .tooltiptext {
   opacity: 1;
   visibility: visible;
-}
-
-.email:active {
-  color: green;
 }

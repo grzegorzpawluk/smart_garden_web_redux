@@ -8,7 +8,7 @@ import webAppImage from './../../pictures/webapp.png';
 function About() {
   return (
     <div className={AboutStyle.about}>
-      <div className={AboutStyle.box}>
+      <div className={AboutStyle['flex-box-items']}>
         <h1>General concept</h1>
         <br />
         <img src={systemDiagramImage} alt="systemDiagramImage"></img>
@@ -23,7 +23,7 @@ function About() {
           established via Bluetooth.
         </p>
       </div>
-      <div className={AboutStyle.box}>
+      <div className={AboutStyle['flex-box-items']}>
         <h1>Control room</h1>
         <br />
         <img src={controlRoomImage} alt="controlRoomImage"></img>
@@ -35,7 +35,7 @@ function About() {
           processed.
         </p>
       </div>
-      <div className={AboutStyle.box}>
+      <div className={AboutStyle['flex-box-items']}>
         <h1>Peripherals</h1>
         <br />
         <p>
@@ -53,7 +53,7 @@ function About() {
         <br />
         <img src={sprinklerImage} alt="sprinklerImage"></img>
       </div>
-      <div className={AboutStyle.box}>
+      <div className={AboutStyle['flex-box-items']}>
         <h1>WebApp</h1>
         <br />
         <p>

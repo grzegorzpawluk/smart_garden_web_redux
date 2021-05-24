@@ -23,6 +23,7 @@ function Nav() {
 
   const logout = () => {
     dispatch(logoutUser());
+    localStorage.removeItem('loginToken');
     setMenuToggle(!menuToggle);
   };
 

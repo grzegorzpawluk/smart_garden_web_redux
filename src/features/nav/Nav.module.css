@@ -9,19 +9,6 @@ nav {
   z-index: 2;
 }
 
-.logo {
-  align-items: center;
-  display: flex;
-  font-size: 20px;
-  height: 5vh;
-  justify-content: space-around;
-  letter-spacing: 5px;
-  position: absolute;
-  text-transform: uppercase;
-  transform: translate(15vw, 50%);
-  width: 5vw;
-}
-
 .navLinks {
   align-items: center;
   display: flex;
@@ -39,6 +26,19 @@ nav {
   font-weight: bold;
   letter-spacing: 3px;
   text-decoration: none;
+}
+
+.logo {
+  align-items: center;
+  display: flex;
+  font-size: 20px;
+  height: 5vh;
+  justify-content: space-around;
+  letter-spacing: 5px;
+  position: absolute;
+  text-transform: uppercase;
+  transform: translate(15vw, 50%);
+  width: 5vw;
 }
 
 @media screen and (max-width: 1250px) {

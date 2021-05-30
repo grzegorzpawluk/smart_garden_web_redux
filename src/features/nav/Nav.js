@@ -72,14 +72,14 @@ function Nav() {
         <Link style={navStyle} to="/contact">
           <li onClick={() => setMenuToggle(!menuToggle)}>Kontakt</li>
         </Link>
-        <Link style={navStyle} to="/">
-          <li
+        <Link tabIndex="-1" style={navStyle} to="/">
+          <button
             onClick={() => {
               logout();
             }}
           >
             Wyloguj
-          </li>
+          </button>
         </Link>
       </ul>
       <BurgerIcon menuToggle={menuToggle} setMenuToggle={setMenuToggle} />

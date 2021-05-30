@@ -1,3 +1,16 @@
+button {
+  background-color: transparent;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  font-family: Georgia, serif;
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  text-decoration: none;
+  width: 10vw;
+}
+
 nav {
   align-items: center;
   background-color: #2d7206;
@@ -48,6 +61,9 @@ nav {
 }
 
 @media screen and (max-width: 768px) {
+  button {
+    width: 40vw;
+  }
   .navLinks {
     background-color: #2d7206;
     clip-path: circle(100px at 100% -15%);
